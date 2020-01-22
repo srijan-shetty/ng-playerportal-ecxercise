@@ -12,4 +12,8 @@ export class PlayerCardComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  onLike() {
+    this.player.nLikes++;
+  }
 }
