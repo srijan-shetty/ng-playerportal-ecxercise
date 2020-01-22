@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Player } from '../_models/player.model';
 
 @Component({
@@ -7,12 +7,7 @@ import { Player } from '../_models/player.model';
   styleUrls: ['./player-card.component.css']
 })
 export class PlayerCardComponent implements OnInit {
-  player: Player = {
-    name: 'Default Player',
-    bio:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    imageUrl: 'assets/angular.png'
-  };
+  @Input() player: Player;
 
   constructor() {}
 
