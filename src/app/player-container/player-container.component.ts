@@ -76,6 +76,22 @@ export class PlayerContainerComponent implements OnInit {
     }
   ];
 
+  get totalLikes(): number {
+    let total = 0;
+
+    //  Lambda expression
+    this.players.forEach(p => {
+      total += p.nLikes;
+    });
+
+    //  anonymous function same as lambda, old school approach
+    // this.players.forEach(function(p) {
+    //   total += p.nLikes;
+    // });
+
+    return total;
+  }
+
   constructor() {}
 
   ngOnInit() {}
