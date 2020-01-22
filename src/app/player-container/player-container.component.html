@@ -1,6 +1,6 @@
-<h2>Total likes so far... {{ totalLikes }}</h2>
+<h2>Total likes so far... {{ playerService.totalLikes }}</h2>
 
 <app-player-card
-  *ngFor="let player of players"
+  *ngFor="let player of playerService.players"
   [player]="player"
 ></app-player-card>
