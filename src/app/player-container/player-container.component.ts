@@ -9,62 +9,70 @@ import { Player } from '../_models/player.model';
 export class PlayerContainerComponent implements OnInit {
   players: Player[] = [
     {
-      name: 'Jsandye Bilton',
-      bio: 'Ergonomic impactful process improvement',
-      imageUrl: 'https://robohash.org/etevenietex.png?size=100x100&set=set1'
+      name: 'Suzi Skoate',
+      bio: 'Virtual static matrices',
+      imageUrl: 'https://robohash.org/utautemsint.png?size=100x100&set=set1',
+      nLikes: 0
     },
     {
-      name: 'Barbaraanne Orring',
-      bio: 'Multi-lateral 6th generation pricing structure',
+      name: 'Sarette Vinnick',
+      bio: 'User-friendly responsive project',
+      imageUrl: 'https://robohash.org/aliasoditnam.png?size=100x100&set=set1',
+      nLikes: 0
+    },
+    {
+      name: 'Ezekiel Westwell',
+      bio: 'Pre-emptive disintermediate instruction set',
       imageUrl:
-        'https://robohash.org/dolorumsaepequasi.png?size=100x100&set=set1'
+        'https://robohash.org/cumqueaccusamusqui.png?size=100x100&set=set1',
+      nLikes: 0
     },
     {
-      name: 'Celina Dalliwater',
-      bio: 'Future-proofed impactful analyzer',
+      name: 'Donia Arman',
+      bio: 'Switchable full-range internet solution',
       imageUrl:
-        'https://robohash.org/etlaborerepudiandae.png?size=100x100&set=set1'
+        'https://robohash.org/distinctioarchitectomodi.png?size=100x100&set=set1',
+      nLikes: 0
     },
     {
-      name: 'Bill Jurgen',
-      bio: 'Adaptive multi-state adapter',
+      name: 'Doretta Mullins',
+      bio: 'Triple-buffered well-modulated alliance',
+      imageUrl: 'https://robohash.org/totamatqueut.png?size=100x100&set=set1',
+      nLikes: 0
+    },
+    {
+      name: 'Piotr Casse',
+      bio: 'Digitized human-resource task-force',
       imageUrl:
-        'https://robohash.org/quiarecusandaenatus.png?size=100x100&set=set1'
+        'https://robohash.org/saepeveniamlaboriosam.png?size=100x100&set=set1',
+      nLikes: 0
     },
     {
-      name: 'Loretta Rutigliano',
-      bio: 'Multi-lateral solution-oriented benchmark',
+      name: 'Micheal Kuhlen',
+      bio: 'Robust bi-directional array',
       imageUrl:
-        'https://robohash.org/modieaquecupiditate.png?size=100x100&set=set1'
+        'https://robohash.org/ducimusomnisquas.png?size=100x100&set=set1',
+      nLikes: 0
     },
     {
-      name: 'Matilda Choupin',
-      bio: 'Re-engineered systemic artificial intelligence',
+      name: 'Frederik Foard',
+      bio: 'Public-key client-server protocol',
+      imageUrl: 'https://robohash.org/abodiovoluptas.png?size=100x100&set=set1',
+      nLikes: 0
+    },
+    {
+      name: 'Coretta Aldrin',
+      bio: 'Horizontal fresh-thinking protocol',
       imageUrl:
-        'https://robohash.org/totamcorruptineque.png?size=100x100&set=set1'
+        'https://robohash.org/odiosolutaculpa.png?size=100x100&set=set1',
+      nLikes: 0
     },
     {
-      name: 'Doug Derrington',
-      bio: 'Implemented executive budgetary management',
+      name: 'Mabel Twigger',
+      bio: 'Polarised mobile Graphic Interface',
       imageUrl:
-        'https://robohash.org/sintvoluptatemut.png?size=100x100&set=set1'
-    },
-    {
-      name: 'Guinna Valler',
-      bio: 'Multi-layered multimedia core',
-      imageUrl:
-        'https://robohash.org/quiaconsequunturdolores.png?size=100x100&set=set1'
-    },
-    {
-      name: 'Alisander Bentote',
-      bio: 'Diverse even-keeled application',
-      imageUrl: 'https://robohash.org/sedquieaque.png?size=100x100&set=set1'
-    },
-    {
-      name: 'Octavius Berka',
-      bio: 'Synchronised heuristic focus group',
-      imageUrl:
-        'https://robohash.org/perferendisdoloremomnis.png?size=100x100&set=set1'
+        'https://robohash.org/fugiatdolorumquidem.png?size=100x100&set=set1',
+      nLikes: 0
     }
   ];
 
