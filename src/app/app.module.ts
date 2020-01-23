@@ -7,6 +7,7 @@ import { PlayerCardComponent } from './player-card/player-card.component';
 import { PlayerContainerComponent } from './player-container/player-container.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { TformComponent } from './tform/tform.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FooterComponent } from './footer/footer.component';
     PlayerCardComponent,
     PlayerContainerComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    TformComponent
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
