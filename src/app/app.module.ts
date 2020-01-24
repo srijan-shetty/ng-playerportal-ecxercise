@@ -8,6 +8,7 @@ import { PlayerContainerComponent } from './player-container/player-container.co
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { TformComponent } from './tform/tform.component';
+import { MinlengthCloneDirective } from './minlength-clone.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TformComponent } from './tform/tform.component';
     PlayerContainerComponent,
     NavbarComponent,
     FooterComponent,
-    TformComponent
+    TformComponent,
+    MinlengthCloneDirective
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
