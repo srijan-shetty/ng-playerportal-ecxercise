@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-rform',
@@ -7,6 +7,8 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./rform.component.css']
 })
 export class RformComponent implements OnInit {
+  form: FormGroup;
+
   constructor(private fb: FormBuilder) {}
 
   ngOnInit() {}
