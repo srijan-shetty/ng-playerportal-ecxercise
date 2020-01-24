@@ -12,8 +12,35 @@ import { FooterComponent } from './footer/footer.component';
 import { TformComponent } from './tform/tform.component';
 import { MinlengthCloneDirective } from './minlength-clone.directive';
 import { RformComponent } from './rform/rform.component';
+import { HomeComponent } from './home/home.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent
+  },
+  {
+    path: 'portal',
+    component: PlayerContainerComponent
+  },
+  {
+    path: 'tform',
+    component: TformComponent
+  },
+  {
+    path: 'rform',
+    component: RformComponent
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
+  }
+];
 
 @NgModule({
   declarations: [
@@ -24,7 +51,9 @@ const routes: Routes = [];
     FooterComponent,
     TformComponent,
     MinlengthCloneDirective,
-    RformComponent
+    RformComponent,
+    HomeComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
