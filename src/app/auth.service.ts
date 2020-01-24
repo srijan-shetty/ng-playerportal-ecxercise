@@ -10,4 +10,8 @@ export class AuthService {
   login(formData) {
     return this.http.post('http://localhost:3000/api/items/login', formData);
   }
+
+  set token(token: string) {
+    localStorage.setItem('app_token', token);
+  }
 }

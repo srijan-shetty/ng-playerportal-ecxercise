@@ -26,6 +26,8 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.authSubscription = this.authService.login(formData).subscribe(
       response => {
         console.log('Server response', response);
+        //  store the token in local storage
+        this.authService.token = response['token'];
         this.router.navigate(['/home']);
       },
       error => {
