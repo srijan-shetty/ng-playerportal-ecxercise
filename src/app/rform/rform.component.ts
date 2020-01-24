@@ -11,5 +11,11 @@ export class RformComponent implements OnInit {
 
   constructor(private fb: FormBuilder) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.form = this.fb.group({
+      name: ['Default Name'],
+      bio: ['Default Bio'],
+      imageUrl: ['Default imageUrl']
+    });
+  }
 }
