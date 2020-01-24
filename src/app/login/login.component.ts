@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Subscription } from 'rxjs';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +11,11 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit, OnDestroy {
   authSubscription: Subscription;
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    private ar: ActivatedRoute
+  ) {}
 
   ngOnInit() {}
 
@@ -28,7 +32,15 @@ export class LoginComponent implements OnInit, OnDestroy {
         console.log('Server response', response);
         //  store the token in local storage
         this.authService.token = response['token'];
-        this.router.navigate(['/home']);
+
+        const url = this.ar.snapshot.queryParamMap.get('returnUrl');
+
+        if (url) {
+          console.log(url);
+          this.router.navigateByUrl(url);
+        } else {
+          this.router.navigate(['/portal']);
+        }
       },
       error => {
         console.error(error);
