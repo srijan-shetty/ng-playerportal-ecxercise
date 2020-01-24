@@ -8,6 +8,7 @@ import {
   ValidationErrors
 } from '@angular/forms';
 import { Observable } from 'rxjs';
+import { ValidationService } from '../validation.service';
 
 @Component({
   selector: 'app-rform',
@@ -17,7 +18,10 @@ import { Observable } from 'rxjs';
 export class RformComponent implements OnInit {
   form: FormGroup;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private fb: FormBuilder,
+    private validationService: ValidationService
+  ) {}
 
   ngOnInit() {
     this.form = this.fb.group({
