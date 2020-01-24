@@ -16,17 +16,23 @@
       ngModel
       #name="ngModel"
     />
-    <span
+    <p
       class="text-danger"
       *ngIf="name.invalid && name.dirty && name.errors?.required"
-      >Name is required
-    </span>
-    <span
+    >
+      Name is required
+    </p>
+    <p
       class="text-danger"
       *ngIf="name.invalid && name.dirty && name.errors?.minLengthClone"
     >
-      {{ name.errors | json }}
-    </span>
+      Please provide
+      {{
+        name.errors?.minLengthClone?.requiredLength -
+          name.errors?.minLengthClone?.actualLength
+      }}
+      characters more
+    </p>
   </div>
 
   <div class="form-group">
