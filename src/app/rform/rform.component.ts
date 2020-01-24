@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  Validators,
+  FormControl
+} from '@angular/forms';
 
 @Component({
   selector: 'app-rform',
@@ -21,5 +26,9 @@ export class RformComponent implements OnInit {
 
   onSubmit() {
     console.log('Form submitted', this.form.value);
+  }
+
+  get name(): FormControl {
+    return this.form.controls['name'] as FormControl;
   }
 }

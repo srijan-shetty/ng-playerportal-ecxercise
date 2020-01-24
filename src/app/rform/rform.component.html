@@ -8,6 +8,23 @@
   <div class="form-group">
     <label>Name</label>
     <input type="text" class="form-control" formControlName="name" />
+    <p
+      class="text-danger"
+      *ngIf="name.invalid && name.dirty && name.errors?.required"
+    >
+      Required
+    </p>
+    <p
+      class="text-danger"
+      *ngIf="name.invalid && name.dirty && name.errors?.minlength"
+    >
+      Provide:
+      {{
+        name.errors?.minlength?.requiredLength -
+          name.errors?.minlength?.actualLength
+      }}
+      more
+    </p>
   </div>
 
   <div class="form-group">
