@@ -17,6 +17,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './auth.guard';
 import { AdminGuard } from './admin.guard';
+import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
 
 const routes: Routes = [
   {
@@ -47,6 +48,10 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
+    path: 'unauthorized',
+    component: UnauthorizedComponent
+  },
+  {
     path: '**',
     component: NotFoundComponent
   }
@@ -64,7 +69,8 @@ const routes: Routes = [
     RformComponent,
     HomeComponent,
     NotFoundComponent,
-    LoginComponent
+    LoginComponent,
+    UnauthorizedComponent
   ],
   imports: [
     BrowserModule,

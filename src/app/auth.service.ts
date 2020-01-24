@@ -15,9 +15,7 @@ export class AuthService {
 
   decodedToken = this.helper.decodeToken(localStorage.getItem('app_token'));
 
-  constructor(private http: HttpClient) {
-    console.log(this.decodedToken);
-  }
+  constructor(private http: HttpClient) {}
 
   login(formData) {
     return this.http.post('http://localhost:3000/api/items/login', formData);
