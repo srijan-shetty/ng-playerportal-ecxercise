@@ -3,8 +3,11 @@ import {
   FormBuilder,
   FormGroup,
   Validators,
-  FormControl
+  FormControl,
+  AbstractControl,
+  ValidationErrors
 } from '@angular/forms';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-rform',
@@ -20,7 +23,8 @@ export class RformComponent implements OnInit {
     this.form = this.fb.group({
       name: ['Default Name', [Validators.required, Validators.minLength(5)]],
       bio: ['Default Bio'],
-      imageUrl: ['Default imageUrl']
+      imageUrl: ['Default imageUrl'],
+      key: ['Default Key', [Validators.required], this.validateKey.bind(this)]
     });
   }
 
@@ -31,4 +35,6 @@ export class RformComponent implements OnInit {
   get name(): FormControl {
     return this.form.controls['name'] as FormControl;
   }
+
+  validateKey(control: AbstractControl): Observable<ValidationErrors> {}
 }
