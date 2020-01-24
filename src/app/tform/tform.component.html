@@ -21,6 +21,12 @@
       *ngIf="name.invalid && name.dirty && name.errors?.required"
       >Name is required
     </span>
+    <span
+      class="text-danger"
+      *ngIf="name.invalid && name.dirty && name.errors?.minLengthClone"
+    >
+      {{ name.errors | json }}
+    </span>
   </div>
 
   <div class="form-group">
