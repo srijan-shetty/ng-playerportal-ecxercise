@@ -15,6 +15,7 @@ import { RformComponent } from './rform/rform.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {
@@ -27,15 +28,18 @@ const routes: Routes = [
   },
   {
     path: 'portal',
-    component: PlayerContainerComponent
+    component: PlayerContainerComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'tform',
-    component: TformComponent
+    component: TformComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'rform',
-    component: RformComponent
+    component: RformComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'login',
