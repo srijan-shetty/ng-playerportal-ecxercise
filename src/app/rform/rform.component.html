@@ -37,6 +37,24 @@
     <input type="text" class="form-control" formControlName="imageUrl" />
   </div>
 
+  <div class="form-group">
+    <label>Key</label>
+    <input type="text" class="form-control" formControlName="key" />
+  </div>
+
+  <p
+    class="text-danger"
+    *ngIf="key.invalid && key.dirty && key.errors?.required"
+  >
+    Required
+  </p>
+  <p
+    class="text-danger"
+    *ngIf="key.invalid && key.dirty && key.errors?.async_error"
+  >
+    Async error!
+  </p>
+
   <button type="submit" class="btn btn-primary" [disabled]="form.invalid">
     Submit
   </button>

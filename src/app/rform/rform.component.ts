@@ -41,6 +41,10 @@ export class RformComponent implements OnInit {
     return this.form.controls['name'] as FormControl;
   }
 
+  get key(): FormControl {
+    return this.form.controls['key'] as FormControl;
+  }
+
   validateKey(control: AbstractControl): Observable<ValidationErrors> {
     //  get the value of the control
     //  make a backend call
