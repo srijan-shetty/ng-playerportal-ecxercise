@@ -1,4 +1,26 @@
-<nav class="navbar navbar-dark bg-primary">
+<nav class="navbar navbar-expand navbar-dark bg-primary">
   <span class="navbar-brand mb-0 h1">Player Portal</span>
-  <p class="text-light">Total likes... {{ playerService.totalLikes }}</p>
+
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/home']" routerLinkActive="active"
+        >Home</a
+      >
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/portal']" routerLinkActive="active"
+        >Portal</a
+      >
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/tform']" routerLinkActive="active"
+        >T-Form</a
+      >
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/rform']" routerLinkActive="active"
+        >R-Form</a
+      >
+    </li>
+  </ul>
 </nav>
