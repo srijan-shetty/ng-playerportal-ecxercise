@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-rform',
@@ -13,7 +13,7 @@ export class RformComponent implements OnInit {
 
   ngOnInit() {
     this.form = this.fb.group({
-      name: ['Default Name'],
+      name: ['Default Name', [Validators.required, Validators.minLength(5)]],
       bio: ['Default Bio'],
       imageUrl: ['Default imageUrl']
     });
