@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { PlayerCardComponent } from './player-card/player-card.component';
@@ -11,6 +12,8 @@ import { FooterComponent } from './footer/footer.component';
 import { TformComponent } from './tform/tform.component';
 import { MinlengthCloneDirective } from './minlength-clone.directive';
 import { RformComponent } from './rform/rform.component';
+
+const routes: Routes = [];
 
 @NgModule({
   declarations: [
@@ -23,7 +26,13 @@ import { RformComponent } from './rform/rform.component';
     MinlengthCloneDirective,
     RformComponent
   ],
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    RouterModule.forRoot(routes)
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
