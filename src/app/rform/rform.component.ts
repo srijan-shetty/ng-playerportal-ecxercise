@@ -18,4 +18,8 @@ export class RformComponent implements OnInit {
       imageUrl: ['Default imageUrl']
     });
   }
+
+  onSubmit() {
+    console.log('Form submitted', this.form.value);
+  }
 }
