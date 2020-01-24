@@ -7,7 +7,7 @@ import {
   AbstractControl,
   ValidationErrors
 } from '@angular/forms';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { ValidationService } from '../validation.service';
 
 @Component({
