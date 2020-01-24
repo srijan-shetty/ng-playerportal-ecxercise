@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { TformComponent } from './tform/tform.component';
 import { MinlengthCloneDirective } from './minlength-clone.directive';
+import { RformComponent } from './rform/rform.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MinlengthCloneDirective } from './minlength-clone.directive';
     NavbarComponent,
     FooterComponent,
     TformComponent,
-    MinlengthCloneDirective
+    MinlengthCloneDirective,
+    RformComponent
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
